@@ -106,7 +106,9 @@ export LEIN_JAVA_CMD="${JAVA_HOME}/bin/java.exe"
 # export JAVA_CMD=`cygpath -w "${LEIN_JAVA_CMD}"`
 
 # for applications that require windows java reference
-export JAVA_CMD="${JAVA_HOME}/bin/java.exe"
+# export JAVA_CMD="${JAVA_HOME}/bin/java.exe"
+#
+export JAVA_CMD="$(cygpath -w ${LEIN_JAVA_CMD})" 
 export PATH="${PATH}:${JAVA_HOME}/bin:${HOME}/bin"
 
 # oh-my-zsh-solarized-powerline options
